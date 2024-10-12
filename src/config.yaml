@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: AI 4 AI
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
