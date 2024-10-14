@@ -23,6 +23,8 @@ let isPaused = false;
 ---
 
 <Layout metadata={metadata}>
+
+<!-- Rolling score Widget ******************* -->  
   <div class="stock-banner" onMouseOver={() => isPaused = true} onMouseOut={() => isPaused = false}>
     <div class="ticker" style={isPaused ? 'animation-play-state: paused;' : ''}>
       {[
@@ -83,7 +85,7 @@ let isPaused = false;
     }
   </style>
 
-<!-- Search Widget ******************* -->
+<!-- Search Bar Widget ******************* -->
 
 <div class="flex justify-center my-8">
   <div class="relative w-full max-w-md">
@@ -102,7 +104,6 @@ let isPaused = false;
     </a>
   </div>
 </div>
-
 <style>
   /* Additional styling for improved appearance */
   input {
@@ -114,7 +115,6 @@ let isPaused = false;
 </style>
 
   <!-- Hero Widget ******************* -->
-
   <Hero
     actions={[
       {
