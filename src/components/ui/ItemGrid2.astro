@@ -3,6 +3,7 @@ import type { ItemGrid as Props } from '~/types';
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
+import { MyLine } from '~/components/MyLine.jsx';
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
@@ -32,8 +33,23 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, icon, image, graph, callToAction, classes: itemClasses = {} }) => (
         <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+          {/* Render image if available, to adjust image size change class - w-X*/}
+          {image && (
+            <img 
+              src={image.src} 
+              alt={image.alt || title} 
+              class="mb-2 w-10 h-auto rounded"
+            />
+          )}
+          {/* Render data graph in the top right corner if available */}
+          {graph && (
+            <div class="absolute top-0 right-5 w-[150px] h-[80px]">
+              <MyLine client:only="react" />
+            </div>
+          )}
+
           {(icon || defaultIcon) && (
             <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
           )}

@@ -93,6 +93,10 @@ export interface Image {
   alt?: string;
 }
 
+export interface Graph {
+  src: string;
+}
+
 export interface Video {
   src: string;
   type?: string;
@@ -139,6 +143,7 @@ export interface Item {
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
+  graph?: Graph;
 }
 
 export interface Price {
