@@ -110,12 +110,8 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'CEO Haowen',
-      href: '#',
-    },
   ],
-  actions: [{ text: 'Download', href: 'https://www.linkedin.com/in/haowen-zou-867139162/', target: '_blank' }],
+  actions: [{ text: 'Dashboard', href: getPermalink('/dashboardv2'), target: '_blank' }],
 };
 
 export const footerData = {
