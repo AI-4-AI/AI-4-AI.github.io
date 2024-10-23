@@ -111,7 +111,7 @@ export const headerData = {
       ],
     },
   ],
-  actions: [{ text: 'Dashboard', href: getPermalink('/dashboardv2'), target: '_blank' }],
+  actions: [{ text: 'Dashboard', href: getPermalink('/dashboardv2')}],
 };
 
 export const footerData = {

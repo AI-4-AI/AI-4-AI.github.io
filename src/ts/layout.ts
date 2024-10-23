@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------
- * @file AdminLTE layout.ts
- * @description Layout for AdminLTE.
+ * @file layout.ts
+ * @description Layout.
  * @license MIT
  * --------------------------------------------
  */

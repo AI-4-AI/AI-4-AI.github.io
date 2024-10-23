@@ -40,7 +40,7 @@ const page = "dashboard v2";
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h3 class="mb-0">Dashboard v2</h3>
+                <h3 class="mb-0">Report</h3>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
@@ -63,13 +63,13 @@ const page = "dashboard v2";
               <div class="col-12 col-sm-6 col-md-3">
                 <div class="info-box">
                   <span class="info-box-icon text-bg-primary shadow-sm">
-                    <i class="bi bi-gear-fill"></i>
+                    <i class="bi bi-check-square-fill"></i>
                   </span>
 
                   <div class="info-box-content">
-                    <span class="info-box-text">CPU Traffic</span>
+                    <span class="info-box-text">AI Scores</span>
                     <span class="info-box-number">
-                      10
+                      95
                       <small>%</small>
                     </span>
                   </div>
@@ -81,12 +81,12 @@ const page = "dashboard v2";
               <div class="col-12 col-sm-6 col-md-3">
                 <div class="info-box">
                   <span class="info-box-icon text-bg-danger shadow-sm">
-                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <i class="bi bi-clipboard-data-fill"></i>
                   </span>
 
                   <div class="info-box-content">
-                    <span class="info-box-text">Likes</span>
-                    <span class="info-box-number">41,410</span>
+                    <span class="info-box-text">Reports</span>
+                    <span class="info-box-number">1,520</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -100,12 +100,12 @@ const page = "dashboard v2";
               <div class="col-12 col-sm-6 col-md-3">
                 <div class="info-box">
                   <span class="info-box-icon text-bg-success shadow-sm">
-                    <i class="bi bi-cart-fill"></i>
+                    <i class="bi bi-heart-pulse-fill"></i>
                   </span>
 
                   <div class="info-box-content">
-                    <span class="info-box-text">Sales</span>
-                    <span class="info-box-number">760</span>
+                    <span class="info-box-text">Diagnose</span>
+                    <span class="info-box-number">760/800</span>
                   </div>
                   <!-- /.info-box-content -->
                 </div>
@@ -119,7 +119,7 @@ const page = "dashboard v2";
                   </span>
 
                   <div class="info-box-content">
-                    <span class="info-box-text">New Members</span>
+                    <span class="info-box-text">Asistance</span>
                     <span class="info-box-number">2,000</span>
                   </div>
                   <!-- /.info-box-content -->
@@ -182,7 +182,7 @@ const page = "dashboard v2";
                     <div class="row">
                       <div class="col-md-8">
                         <p class="text-center">
-                          <strong>Sales: 1 Jan, 2023 - 30 Jul, 2023</strong>
+                          <strong>Scores: 1 Jan, 2023 - 30 Jul, 2023</strong>
                         </p>
 
                         <div id="sales-chart"></div>
@@ -194,50 +194,64 @@ const page = "dashboard v2";
                         </p>
 
                         <div class="progress-group">
-                          Add Products to Cart
-                          <span class="float-end"><b>160</b>/200</span>
+                          Rights
+                          <span class="float-end"><b>60</b>/100</span>
                           <div class="progress progress-sm">
                             <div
                               class="progress-bar text-bg-primary"
-                              style="width: 80%"
-                            >
-                            </div>
-                          </div>
-                        </div>
-                        <!-- /.progress-group -->
-
-                        <div class="progress-group">
-                          Complete Purchase
-                          <span class="float-end"><b>310</b>/400</span>
-                          <div class="progress progress-sm">
-                            <div
-                              class="progress-bar text-bg-danger"
-                              style="width: 75%"
-                            >
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- /.progress-group -->
-                        <div class="progress-group">
-                          <span class="progress-text">Visit Premium Page</span>
-                          <span class="float-end"><b>480</b>/800</span>
-                          <div class="progress progress-sm">
-                            <div
-                              class="progress-bar text-bg-success"
                               style="width: 60%"
                             >
                             </div>
                           </div>
                         </div>
+                        <!-- /.progress-group -->
+                        <div style="height: 10px;"></div>
+                        <div class="progress-group">
+                          Accuracy
+                          <span class="float-end"><b>30</b>/100</span>
+                          <div class="progress progress-sm">
+                            <div
+                              class="progress-bar text-bg-danger"
+                              style="width: 30%"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /.progress-group -->
+                        <div style="height: 10px;"></div>
+                        <div class="progress-group">
+                          <span class="progress-text">Content</span>
+                          <span class="float-end"><b>80</b>/100</span>
+                          <div class="progress progress-sm">
+                            <div
+                              class="progress-bar text-bg-success"
+                              style="width: 80%"
+                            >
+                            </div>
+                          </div>
+                        </div>
 
                         <!-- /.progress-group -->
+                        <div style="height: 10px;"></div>
                         <div class="progress-group">
-                          Send Inquiries
-                          <span class="float-end"><b>250</b>/500</span>
+                          Ethical
+                          <span class="float-end"><b>50</b>/100</span>
                           <div class="progress progress-sm">
                             <div
                               class="progress-bar text-bg-warning"
+                              style="width: 50%"
+                            >
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /.progress-group -->
+                        <div style="height: 10px;"></div>
+                        <div class="progress-group">
+                          Safety
+                          <span class="float-end"><b>50</b>/100</span>
+                          <div class="progress progress-sm">
+                            <div
+                              class="progress-bar text-bg-dark"
                               style="width: 50%"
                             >
                             </div>
@@ -258,8 +272,8 @@ const page = "dashboard v2";
                           <span class="text-success">
                             <i class="bi bi-caret-up-fill"></i> 17%
                           </span>
-                          <h5 class="fw-bold mb-0">$35,210.43</h5>
-                          <span class="text-uppercase">TOTAL REVENUE</span>
+                          <h5 class="fw-bold mb-0">95</h5>
+                          <span class="text-uppercase">TOTAL SCORE</span>
                         </div>
                       </div>
 
@@ -269,8 +283,8 @@ const page = "dashboard v2";
                           <span class="text-info">
                             <i class="bi bi-caret-left-fill"></i> 0%
                           </span>
-                          <h5 class="fw-bold mb-0">$10,390.90</h5>
-                          <span class="text-uppercase">TOTAL COST</span>
+                          <h5 class="fw-bold mb-0">10</h5>
+                          <span class="text-uppercase">TOTAL MISTAKES</span>
                         </div>
                       </div>
                       <!-- /.col -->
@@ -279,8 +293,8 @@ const page = "dashboard v2";
                           <span class="text-success">
                             <i class="bi bi-caret-up-fill"></i> 20%
                           </span>
-                          <h5 class="fw-bold mb-0">$24,813.53</h5>
-                          <span class="text-uppercase">TOTAL PROFIT</span>
+                          <h5 class="fw-bold mb-0">24,813</h5>
+                          <span class="text-uppercase">TOTAL BIAS</span>
                         </div>
                       </div>
                       <!-- /.col -->
@@ -289,7 +303,7 @@ const page = "dashboard v2";
                           <span class="text-danger">
                             <i class="bi bi-caret-down-fill"></i> 18%
                           </span>
-                          <h5 class="fw-bold mb-0">1200</h5>
+                          <h5 class="fw-bold mb-0">350/500</h5>
                           <span class="text-uppercase">GOAL COMPLETIONS</span>
                         </div>
                       </div>
@@ -311,6 +325,8 @@ const page = "dashboard v2";
                 <!--begin::Row-->
                 <div class="row g-4 mb-4">
                   <div class="col-md-6">
+
+                    <script>/*
                     <!-- DIRECT CHAT -->
                     <div class="card direct-chat direct-chat-warning">
                       <div class="card-header">
@@ -420,7 +436,7 @@ const page = "dashboard v2";
                             />
                             <!-- /.direct-chat-img -->
                             <div class="direct-chat-text">
-                              Working with AdminLTE on a great new app! Wanna
+                              Working with AI4AI on a great new app! Wanna
                               join?
                             </div>
                             <!-- /.direct-chat-text -->
@@ -618,10 +634,14 @@ const page = "dashboard v2";
                       <!-- /.card-footer-->
                     </div>
                     <!-- /.direct-chat -->
+                    */</script>
+              
                   </div>
                   <!-- /.col -->
-
+                  
                   <div class="col-md-6">
+
+                    <script> /*
                     <!-- USERS LIST -->
                     <div class="card">
                       <div class="card-header">
@@ -766,6 +786,7 @@ const page = "dashboard v2";
                           </div>
                         </div>
                         <!-- /.users-list -->
+                        
                       </div>
                       <!-- /.card-body -->
                       <div class="card-footer text-center">
@@ -773,6 +794,7 @@ const page = "dashboard v2";
                       </div>
                       <!-- /.card-footer -->
                     </div>
+                    */</script>
                     <!-- /.card -->
                   </div>
                   <!-- /.col -->
@@ -782,7 +804,7 @@ const page = "dashboard v2";
                 <!--begin::Latest Order Widget-->
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Latest Orders</h3>
+                    <h3 class="card-title">Latest AI Model Activities</h3>
 
                     <div class="card-tools">
                       <button
@@ -808,10 +830,10 @@ const page = "dashboard v2";
                       <table class="table m-0">
                         <thead>
                           <tr>
-                            <th>Order ID</th>
-                            <th>Item</th>
+                            <th>Train ID</th>
+                            <th>Event</th>
                             <th>Status</th>
-                            <th>Popularity</th>
+                            <th>Score</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -819,10 +841,10 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR9842</a>
                             </td>
-                            <td>Call of Duty IV</td>
+                            <td>Completed Safety Score Testing</td>
                             <td>
                               <span class="badge text-bg-success">
-                                Shipped
+                                Succeed
                               </span>
                             </td>
                             <td>
@@ -833,7 +855,7 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR1848</a>
                             </td>
-                            <td>Samsung Smart TV</td>
+                            <td>Waiting for Model to proceed Ethical</td>
                             <td>
                               <span class="badge text-bg-warning">Pending</span>
                             </td>
@@ -845,10 +867,10 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR7429</a>
                             </td>
-                            <td>iPhone 6 Plus</td>
+                            <td>System Safety Test</td>
                             <td>
                               <span class="badge text-bg-danger">
-                                Delivered
+                                Failed
                               </span>
                             </td>
                             <td>
@@ -859,9 +881,9 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR7429</a>
                             </td>
-                            <td>Samsung Smart TV</td>
+                            <td>Content Test</td>
                             <td>
-                              <span class="badge text-bg-info">Processing</span>
+                              <span class="badge text-bg-info">Paused</span>
                             </td>
                             <td>
                               <div id="table-sparkline-4"></div>
@@ -871,7 +893,7 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR1848</a>
                             </td>
-                            <td>Samsung Smart TV</td>
+                            <td>Uploading New Rules for Safety</td>
                             <td>
                               <span class="badge text-bg-warning">Pending</span>
                             </td>
@@ -883,10 +905,10 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR7429</a>
                             </td>
-                            <td>iPhone 6 Plus</td>
+                            <td>Accuracy Test Failed</td>
                             <td>
                               <span class="badge text-bg-danger">
-                                Delivered
+                                Failed
                               </span>
                             </td>
                             <td>
@@ -897,9 +919,9 @@ const page = "dashboard v2";
                             <td>
                               <a href="pages/examples/invoice.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">OR9842</a>
                             </td>
-                            <td>Call of Duty IV</td>
+                            <td>Completed Rights Test and Fix</td>
                             <td>
-                              <span class="badge text-bg-success">Shipped</span>
+                              <span class="badge text-bg-success">Succeed</span>
                             </td>
                             <td>
                               <div id="table-sparkline-7"></div>
@@ -916,13 +938,13 @@ const page = "dashboard v2";
                       href="javascript:void(0)"
                       class="btn btn-sm btn-primary float-start"
                     >
-                      Place New Order
+                      Start A New Activity
                     </a>
                     <a
                       href="javascript:void(0)"
                       class="btn btn-sm btn-secondary float-end"
                     >
-                      View All Orders
+                      View All Activities
                     </a>
                   </div>
                   <!-- /.card-footer -->
@@ -932,6 +954,8 @@ const page = "dashboard v2";
               <!-- /.col -->
 
               <div class="col-md-4">
+
+                <script> /*
                 <!-- Info Boxes Style 2 -->
                 <div class="info-box mb-3 text-bg-warning">
                   <span class="info-box-icon">
@@ -980,11 +1004,13 @@ const page = "dashboard v2";
                   </div>
                   <!-- /.info-box-content -->
                 </div>
+                */ </script>
                 <!-- /.info-box -->
-
+                <div style="height: 23px;"></div>
+                
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h3 class="card-title">Browser Usage</h3>
+                    <h3 class="card-title">RACES Usage</h3>
 
                     <div class="card-tools">
                       <button
@@ -1020,7 +1046,7 @@ const page = "dashboard v2";
                     <ul class="nav nav-pills flex-column">
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          United States of America
+                          Safety Score
                           <span class="float-end text-danger">
                             <i class="bi bi-arrow-down fs-7"></i>
                              12%
@@ -1029,7 +1055,7 @@ const page = "dashboard v2";
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          India
+                          Accuracy Score
                           <span class="float-end text-success">
                             <i class="bi bi-arrow-up fs-7"></i> 4%
                           </span>
@@ -1037,7 +1063,7 @@ const page = "dashboard v2";
                       </li>
                       <li class="nav-item">
                         <a href="#" class="nav-link">
-                          China
+                          Content Score
                           <span class="float-end text-info">
                             <i class="bi bi-arrow-left fs-7"></i> 0%
                           </span>
@@ -1052,7 +1078,7 @@ const page = "dashboard v2";
                 <!-- PRODUCT LIST -->
                 <div class="card">
                   <div class="card-header">
-                    <h3 class="card-title">Recently Added Products</h3>
+                    <h3 class="card-title">Recently Added Widgets</h3>
 
                     <div class="card-tools">
                       <button
@@ -1085,13 +1111,13 @@ const page = "dashboard v2";
                         </div>
                         <div class="col-10">
                           <a href="javascript:void(0)" class="fw-bold">
-                            Samsung TV
+                            Automated AI Analysis
                             <span class="badge text-bg-warning float-end">
-                              $1800
+                              Ordered
                             </span>
                           </a>
                           <div class="text-truncate">
-                            Samsung 32" 1080p 60Hz LED Smart HDTV.
+                            AI Analysis by AI4AI
                           </div>
                         </div>
                       </div>
@@ -1106,13 +1132,13 @@ const page = "dashboard v2";
                         </div>
                         <div class="col-10">
                           <a href="javascript:void(0)" class="fw-bold">
-                            Bicycle
+                            AI Improvement Plans
                             <span class="badge text-bg-info float-end">
-                              $700
+                              Viewed
                             </span>
                           </a>
                           <div class="text-truncate">
-                            26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                            Plans for AI Improvement 
                           </div>
                         </div>
                       </div>
@@ -1127,14 +1153,13 @@ const page = "dashboard v2";
                         </div>
                         <div class="col-10">
                           <a href="javascript:void(0)" class="fw-bold">
-                            Xbox One
+                            New Malicious Data Testing
                             <span class="badge text-bg-danger float-end">
-                              $350
+                              Uninstalled
                             </span>
                           </a>
                           <div class="text-truncate">
-                            Xbox One Console Bundle with Halo Master Chief
-                            Collection.
+                            Database for malicious input
                           </div>
                         </div>
                       </div>
@@ -1149,13 +1174,13 @@ const page = "dashboard v2";
                         </div>
                         <div class="col-10">
                           <a href="javascript:void(0)" class="fw-bold">
-                            PlayStation 4
+                            AI Assitant for Data Testing
                             <span class="badge text-bg-success float-end">
-                              $399
+                              Installed
                             </span>
                           </a>
                           <div class="text-truncate">
-                            PlayStation 4 500GB Console (PS4)
+                            Data Testing
                           </div>
                         </div>
                       </div>
@@ -1165,7 +1190,7 @@ const page = "dashboard v2";
                   <!-- /.card-body -->
                   <div class="card-footer text-center">
                     <a href="javascript:void(0)" class="uppercase">
-                      View All Products
+                      View All Widgets
                     </a>
                   </div>
                   <!-- /.card-footer -->
@@ -1212,16 +1237,29 @@ const page = "dashboard v2";
       const sales_chart_options = {
         series: [
           {
-            name: "Digital Goods",
-            data: [28, 48, 40, 19, 86, 27, 90],
+            name: "Accuracy Score",
+            data: [75, 80, 90, 95, 96, 98, 99],
           },
           {
-            name: "Electronics",
+            name: "Safety Score",
+            data: [28, 48, 40, 29, 40, 38, 90],
+          },
+          {
+            name: "Rights Score",
             data: [65, 59, 80, 81, 56, 55, 40],
           },
+          {
+            name: "Ethical Score",
+            data: [18, 33, 17, 15, 33, 27, 35],
+          },
+          {
+            name: "Context Score",
+            data: [10, 20, 10, 10, 13, 20, 15],
+          },
+          
         ],
         chart: {
-          height: 180,
+          height: 300,
           type: "area",
           toolbar: {
             show: false,
@@ -1230,7 +1268,7 @@ const page = "dashboard v2";
         legend: {
           show: false,
         },
-        colors: ["#0d6efd", "#20c997"],
+        colors: ["#0d6efd", "yellow", "#20c997", "red", "gray"],
         dataLabels: {
           enabled: false,
         },
@@ -1240,13 +1278,13 @@ const page = "dashboard v2";
         xaxis: {
           type: "datetime",
           categories: [
-            "2023-01-01",
-            "2023-02-01",
-            "2023-03-01",
-            "2023-04-01",
-            "2023-05-01",
-            "2023-06-01",
-            "2023-07-01",
+            "2024-01-01",
+            "2024-02-01",
+            "2024-03-01",
+            "2024-04-01",
+            "2024-05-01",
+            "2024-06-01",
+            "2024-07-01",
           ],
         },
         tooltip: {
@@ -1340,11 +1378,11 @@ const page = "dashboard v2";
       //-------------
 
       const pie_chart_options = {
-        series: [700, 500, 400, 600, 300, 100],
+        series: [700, 500, 400, 600, 300],
         chart: {
           type: "donut",
         },
-        labels: ["Chrome", "Edge", "FireFox", "Safari", "Opera", "IE"],
+        labels: ["Rights", "Accuracy", "Content", "Ethical", "Safety"],
         dataLabels: {
           enabled: false,
         },

@@ -1,7 +1,7 @@
 /**
  * --------------------------------------------
- * @file AdminLTE fullscreen.ts
- * @description Fullscreen plugin for AdminLTE.
+ * @file fullscreen.ts
+ * @description Fullscreen plugin.
  * @license MIT
  * --------------------------------------------
  */

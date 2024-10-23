@@ -1,7 +1,7 @@
 {
-  "name": "almasaeed2010/adminlte",
-  "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 4",
-  "homepage": "https://adminlte.io/",
+  "name": "ai4ai/ai4ai",
+  "description": "AI4AI - AI evaluation tool",
+  "homepage": "https://ai4ai.vercel.app/",
   "keywords": [
     "css",
     "js",
@@ -15,11 +15,11 @@
   ],
   "authors": [
     {
-      "name": "Colorlib"
+      "name": "AI4AI"
     }
   ],
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/ColorlibHQ/AdminLTE/issues"
+    "issues": "https://github.com/AI-4-AI/AI-4-AI.github.io/issues"
   }
 }
