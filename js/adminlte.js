@@ -87,8 +87,8 @@
 
     /**
      * --------------------------------------------
-     * @file AdminLTE layout.ts
-     * @description Layout for AdminLTE.
+     * @file layout.ts
+     * @description Layout.
      * @license MIT
      * --------------------------------------------
      */
@@ -129,8 +129,8 @@
 
     /**
      * --------------------------------------------
-     * @file AdminLTE push-menu.ts
-     * @description Push menu for AdminLTE.
+     * @file push-menu.ts
+     * @description Push menu.
      * @license MIT
      * --------------------------------------------
      */
@@ -275,8 +275,8 @@
 
     /**
      * --------------------------------------------
-     * @file AdminLTE treeview.ts
-     * @description Treeview plugin for AdminLTE.
+     * @file treeview.ts
+     * @description Treeview plugin.
      * @license MIT
      * --------------------------------------------
      */
@@ -377,8 +377,8 @@
 
     /**
      * --------------------------------------------
-     * @file AdminLTE direct-chat.ts
-     * @description Direct chat for AdminLTE.
+     * @file direct-chat.ts
+     * @description Direct chat.
      * @license MIT
      * --------------------------------------------
      */
@@ -437,8 +437,8 @@
 
     /**
      * --------------------------------------------
-     * @file AdminLTE card-widget.ts
-     * @description Card widget for AdminLTE.
+     * @file card-widget.ts
+     * @description Card widget.
      * @license MIT
      * --------------------------------------------
      */
@@ -623,8 +623,8 @@
 
     /**
      * --------------------------------------------
-     * @file AdminLTE fullscreen.ts
-     * @description Fullscreen plugin for AdminLTE.
+     * @file fullscreen.ts
+     * @description Fullscreen plugin.
      * @license MIT
      * --------------------------------------------
      */
