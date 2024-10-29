@@ -1,0 +1,277 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { headerData } from '~/navigation';
+import Header from '~/components/widgets/Header.astro';
+
+
+
+/* Top Website Tab */
+const metadata = {
+  title: 'AI4AI - AI model evaluation and more',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <div class="container mx-auto px-6 py-8">
+    <!-- First Row: Product Overview & Performance Summary -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <!-- Product Overview -->
+      <div class="bg-white shadow-lg rounded-lg p-6 col-span-1 flex flex-col items-center">
+        <img src="/logos/gemini-logo.jpg" alt="Gemini Logo" class="w-20 h-20 mb-4 rounded-full object-cover" />
+        <h2 class="text-2xl font-semibold">Gemini</h2>
+        <p class="text-sm text-gray-500">Published by Google</p>
+        <div class="mt-4 flex flex-col items-center space-y-2">
+          <div class="text-sm">Languages: <span class="font-medium">46</span></div>
+          <div class="text-sm">Countries: <span class="font-medium">239</span></div>
+          <div class="text-sm">Release Date: <span class="font-medium">March 21, 2023</span></div>
+          <div class="text-sm">Rank: <span class="font-medium">#1 / 200</span></div>
+        </div>
+      </div>
+      <!-- Performance Summary -->
+      <div class="bg-white shadow-lg rounded-lg p-6 col-span-2">
+        <h3 class="text-xl font-semibold mb-2">Dynamic Reflection</h3>
+        <div class="flex items-baseline">
+          <span class="text-4xl font-bold mr-2">90</span>
+          <span class="text-sm text-green-500">Overall Score &#x25B2; +2.45%</span>
+        </div>
+        <!-- Example Line Chart -->
+        <div class="mt-4">
+          <div id="line-chart"></div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Second Row: Score Subsets, Testing, News -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Score Subsets -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-lg font-semibold mb-4">Score Subsets</h3>
+        <p class="text-green-500 font-bold mb-4">✔ Passed</p>
+        <!-- Example Radar Chart -->
+        <div id="radar-chart"></div>
+      </div>
+      
+      <!-- Testing Information -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-lg font-semibold mb-4">What we are testing now</h3>
+        <p class="text-green-500 font-bold mb-4">✔ Passed</p>
+        <!-- Example Pie Chart Placeholder -->
+        <div id="pie-chart"></div>
+        <p class="text-center text-sm mt-2">856 employee total</p>
+      </div>
+      
+      <!-- News Section -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-lg font-semibold mb-4">News</h3>
+        <ul class="space-y-4">
+          <li class="border-b border-gray-200 pb-4">
+            <h4 class="font-medium text-blue-600">Google moves Gemini app team to DeepMind</h4>
+            <p class="text-sm text-gray-500">October 17, 2024</p>
+          </li>
+          <li class="border-b border-gray-200 pb-4">
+            <h4 class="font-medium text-blue-600">National Archives Pushes Google Gemini AI on Employees</h4>
+            <p class="text-sm text-gray-500">October 17, 2024</p>
+          </li>
+          <li>
+            <h4 class="font-medium text-blue-600">Updates offer new Gemini image resizing options.</h4>
+            <p class="text-sm text-gray-500">October 15, 2024</p>
+          </li>
+        </ul>
+        <div class="mt-4 text-right">
+          <a href="#" class="text-blue-500 hover:underline">View all &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+
+
+
+
+<!-- apexcharts -->
+<script
+src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
+integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8="
+crossorigin="anonymous"></script>
+
+<!-- ChartJS -->
+<script is:inline>
+// NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+// IT'S ALL JUST JUNK FOR DEMO
+// ++++++++++++++++++++++++++++++++++++++++++
+
+const sales_chart_options = {
+  series: [
+    {
+      name: "Accuracy Score",
+      data: [75, 80, 90, 95, 96, 98, 99],
+    },
+    {
+      name: "Safety Score",
+      data: [28, 48, 40, 29, 40, 38, 90],
+    },
+    {
+      name: "Rights Score",
+      data: [65, 59, 80, 81, 56, 55, 40],
+    },
+    {
+      name: "Ethical Score",
+      data: [18, 33, 17, 15, 33, 27, 35],
+    },
+    {
+      name: "Context Score",
+      data: [10, 20, 10, 10, 13, 20, 15],
+    },
+    
+  ],
+  chart: {
+    height: 300,
+    type: "area",
+    toolbar: {
+      show: false,
+    },
+  },
+  legend: {
+    show: false,
+  },
+  colors: ["#0d6efd", "yellow", "#20c997", "red", "white"],
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: "smooth",
+  },
+  xaxis: {
+    type: "datetime",
+    categories: [
+      "2024-01-01",
+      "2024-02-01",
+      "2024-03-01",
+      "2024-04-01",
+      "2024-05-01",
+      "2024-06-01",
+      "2024-07-01",
+    ],
+  },
+  tooltip: {
+    x: {
+      format: "MMMM yyyy",
+    },
+  },
+};
+
+const sales_chart = new ApexCharts(
+  document.querySelector("#line-chart"),
+  sales_chart_options,
+);
+sales_chart.render();
+
+
+//-------------
+// - PIE CHART -
+//-------------
+
+const pie_chart_options = {
+  series: [700, 500, 400, 600, 300],
+  chart: {
+    type: "donut",
+  },
+  labels: ["Rights", "Accuracy", "Content", "Ethical", "Safety"],
+  dataLabels: {
+    enabled: false,
+  },
+  colors: [
+    "#0d6efd",
+    "#20c997",
+    "#ffc107",
+    "#d63384",
+    "#6f42c1",
+    "#adb5bd",
+  ],
+};
+
+const pie_chart = new ApexCharts(
+  document.querySelector("#pie-chart"),
+  pie_chart_options,
+);
+pie_chart.render();
+
+//-----------------
+// - END PIE CHART -
+//-----------------
+
+
+
+const radar_chart_options = {
+  series: [
+    {
+      name: 'Series 1',
+      data: [80, 50, 30, 40, 100, 20],
+    },
+    {
+      name: 'Series 2',
+      data: [20, 30, 40, 80, 20, 80],
+    },
+    {
+      name: 'Series 3',
+      data: [44, 76, 78, 13, 43, 10],
+    },
+  ],
+  chart: {
+    height: 350,
+    type: 'radar',
+    dropShadow: {
+      enabled: true,
+      blur: 1,
+      left: 1,
+      top: 1,
+    },
+  },
+  title: {
+    text: 'Radar Chart - Multi Series',
+  },
+  stroke: {
+    width: 2,
+  },
+  fill: {
+    opacity: 0.1,
+  },
+  markers: {
+    size: 0,
+  },
+  yaxis: {
+    stepSize: 20,
+  },
+  xaxis: {
+    categories: ['2011', '2012', '2013', '2014', '2015', '2016'],
+  },
+};
+      
+const radar_chart = new ApexCharts(
+  document.querySelector("#radar-chart"),
+  radar_chart_options,
+);
+  radar_chart.render();
+</script>
+
