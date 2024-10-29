@@ -24,66 +24,70 @@ let isPaused = false;
 
 <Layout metadata={metadata}>
 
-<!-- Rolling score Widget ******************* -->  
-  <div class="stock-banner" onMouseOver={() => isPaused = true} onMouseOut={() => isPaused = false}>
-    <div class="ticker" style={isPaused ? 'animation-play-state: paused;' : ''}>
-      {[
-        { symbol: 'ChatGPT', price: 99, change: 2.5, logo: '/logos/chatgpt-logo.png', url: 'https://www.openai.com', },
-        { symbol: 'Microsoft Copilot', price: 120, change: -1.2, logo: '/logos/microsoft_copilot.png' },
-        { symbol: 'OpenAI', price: 150, change: 0.5, logo: '/logos/chatgpt-logo.png' },
-        // Add more stock items as needed
-        ].map(({ symbol, price, change, logo, url }) => (
+<!-- Rolling score Widget ******************* -->
+<div class="stock-banner" onMouseOver={() => isPaused = true} onMouseOut={() => isPaused = false}>
+  <div class="ticker" style={isPaused ? 'animation-play-state: paused;' : ''}>
+    {[...Array(2)].flatMap(() => [
+      { symbol: 'ChatGPT', price: 97, change: 2.5, logo: '/logos/chatgpt-logo.png', url: 'https://www.openai.com' },
+      { symbol: 'Microsoft Copilot', price: 95, change: -1.2, logo: '/logos/microsoft_copilot.png' },
+      { symbol: 'Gemini', price: 93, change: -3.5, logo: '/logos/gemini-logo.jpg' },
+      { symbol: 'Meta', price: 92, change: 1.5, logo: '/logos/meta-logo.png' },
+      // Duplicate more stock items if needed
+    ]).map(({ symbol, price, change, logo, url }) => (
       <a href={url} target="_blank" class="stock-item">
         <img src={logo} alt={`${symbol} logo`} class="stock-logo" />
-        <span>{symbol}: ${price} <span class={change >= 0 ? 'text-green-500' : 'text-red-500'}>({change}%)</span></span>
+        <span class="stock-text mr-4">
+          {symbol}: {price} <span class={change >= 0 ? 'text-green-500' : 'text-red-500'}>({change}%)</span>
+        </span>
       </a>
     ))}
   </div>
 </div>
-  <style>
-    .stock-banner {
-      overflow: hidden;
-      white-space: nowrap;
-      display: flex;
-      padding: 10px;
-      background-color: #f5f5f5; /* Light gray background */
-      border: 1px solid #ddd; /* Border for styling */
-      border-radius: 5px; /* Rounded corners */
+
+<style>
+  .stock-banner {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .ticker {
+    display: inline-flex;
+    animation: ticker 30s linear infinite;
+  }
+
+  .stock-item {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .stock-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
     }
-  
-    .ticker {
-      display: flex;
-      animation: ticker 30s linear infinite;
+    to {
+      transform: translateX(-50%);
     }
-  
-    .stock-item {
-      display: flex;
-      align-items: center;
-      margin-right: 24px;
-      font-size: 16px;
-      color: #333; /* Text color */
-    }
-  
-    .stock-logo {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-    }
-  
-    @keyframes ticker {
-      from {
-        transform: translateX(100%);
-      }
-      to {
-        transform: translateX(-100%);
-      }
-    }
-  
-    /* Pause animation when hovered */
-    .stock-banner:hover .ticker {
-      animation-play-state: paused;
-    }
-  </style>
+  }
+
+  .stock-banner:hover .ticker {
+    animation-play-state: paused;
+  }
+</style>
+
 
 <!-- Search Bar Widget ******************* -->
 
@@ -120,8 +124,8 @@ let isPaused = false;
       {
         variant: 'primary',
         text: 'Try Now',
-        href: 'https://www.linkedin.com/in/haowen-zou-867139162/',
-        target: '_blank',
+        href: '../dashboardv2',
+        // target: '_blank',
         icon: 'tabler:ai',
       },
       {
@@ -129,7 +133,6 @@ let isPaused = false;
         href: '#features',
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Astronaut Image' }}
   >
     <Fragment slot="title">
       Free tool <span class="hidden xl:inline">for Evaluating AI models</span>
@@ -176,39 +179,81 @@ items={[
     image: { src: '/logos/microsoft_copilot.png' },
   },
   {
+    title: 'Google Gemini',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">91 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/gemini-logo.jpg' },
+  },
+  {
     title: 'Llama',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:approval',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-green-500">88 (+2.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">2 days ago</div>
+    `,
+    image: { src: '/logos/xxx-logo.jpg' },
   },
   {
     title: 'Claude',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:document',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">84 (-3.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">1 days ago</div>
+    `,
+    image: { src: '/logos/xxx-logo.jpg' },
   },
   {
     title: 'Perplexity AI',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:advertising',
-  },
-  {
-    title: 'Gemini',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:currency-exchange',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">90 (-1.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/xxx-logo.jpg' },
   },
   {
     title: 'Meta AI',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:voice-presentation',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/xxx-logo.jpg' },
   },
   {
     title: 'Chatsonic',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:business-contact',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/xxx-logo.jpg' },
   },
   {
     title: 'Poe',
-    description: 'TO-DO',
-    icon: 'flat-color-icons:database',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/xxx-logo.jpg' },
   },
 ]}
 >
