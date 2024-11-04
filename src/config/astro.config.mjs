@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
+import react from '@astrojs/react'
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
       theme: 'dark-plus'
     }
   },
-  integrations: [mdx()],
+  integrations: [mdx(), react()],
   srcDir: './src/html',
   cacheDir: './dist/pages',
   outDir: './dist/pages',

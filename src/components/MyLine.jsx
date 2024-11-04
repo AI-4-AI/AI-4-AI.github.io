@@ -25,8 +25,9 @@ export const MyLine = (data) => {
     setIsRegistered(true);
   }, []);
 
-  if (!isRegistered) return <></>;
-
+  if (!isRegistered) {
+    return <></>;
+  }
   return (
     <div style={{ width: '150px', height: '150px' }}>
     <Line
