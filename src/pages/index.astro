@@ -28,10 +28,10 @@ let isPaused = false;
 <div class="stock-banner" onMouseOver={() => isPaused = true} onMouseOut={() => isPaused = false}>
   <div class="ticker" style={isPaused ? 'animation-play-state: paused;' : ''}>
     {[...Array(2)].flatMap(() => [
-      { symbol: 'ChatGPT', price: 97, change: 2.5, logo: '/logos/chatgpt-logo.png', url: 'https://www.openai.com' },
+      { symbol: 'OpenAI ChatGPT', price: 97, change: 2.5, logo: '/logos/chatgpt-logo.png', url: 'https://www.openai.com' },
       { symbol: 'Microsoft Copilot', price: 95, change: -1.2, logo: '/logos/microsoft_copilot.png' },
-      { symbol: 'Gemini', price: 93, change: -3.5, logo: '/logos/gemini-logo.jpg' },
-      { symbol: 'Meta', price: 92, change: 1.5, logo: '/logos/meta-logo.png' },
+      { symbol: 'Google Gemini', price: 93, change: -3.5, logo: '/logos/google-logo.png' },
+      { symbol: 'Meta Llama', price: 92, change: 1.5, logo: '/logos/meta-logo.png' },
       // Duplicate more stock items if needed
     ]).map(({ symbol, price, change, logo, url }) => (
       <a href={url} target="_blank" class="stock-item">
@@ -124,11 +124,11 @@ let isPaused = false;
 <Features2
 id="aiScores"
 title="AI Models"
-subtitle="Provides most recent scores for AI models currently in the market"
+subtitle="Provides most recent scores for LLM AI models currently in the market"
 tagline="Previously evaluated"
 items={[
   {
-    title: 'OpenAI-ChatGPT',
+    title: 'OpenAI ChatGPT',
     description: `
     <div class="mb-1">
       <span class="text-black font-semibold">AI Score:</span>
@@ -136,7 +136,7 @@ items={[
     </div>
     <div class="text-gray-500 text-sm">2 days ago</div>
     `,
-    image: { src: '/logos/chatgpt-logo.png' },
+    image: { src: '/logos/chatgpt-green-logo.png' },
     graph: { src: '/logos/chatgpt-logo.png' },
   },
   {
@@ -159,10 +159,10 @@ items={[
     </div>
     <div class="text-gray-500 text-sm">3 days ago</div>
     `,
-    image: { src: '/logos/gemini-logo.jpg' },
+    image: { src: '/logos/google-logo.png' },
   },
   {
-    title: 'Llama',
+    title: 'MetaAI Llama',
     description: `
     <div class="mb-1">
       <span class="text-black font-semibold">AI Score:</span>
@@ -170,10 +170,10 @@ items={[
     </div>
     <div class="text-gray-500 text-sm">2 days ago</div>
     `,
-    image: { src: '/logos/xxx-logo.jpg' },
+    image: { src: '/logos/meta-logo.png' },
   },
   {
-    title: 'Claude',
+    title: 'Anthropic Claude',
     description: `
     <div class="mb-1">
       <span class="text-black font-semibold">AI Score:</span>
@@ -181,7 +181,73 @@ items={[
     </div>
     <div class="text-gray-500 text-sm">1 days ago</div>
     `,
-    image: { src: '/logos/xxx-logo.jpg' },
+    image: { src: '/logos/claude-logo.png' },
+  },
+  {
+    title: 'Mistral AI',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/mistral-logo.png' },
+  },
+  {
+    title: 'xAI Grok',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/xai-logo.png' },
+  },
+  {
+    title: 'Cohere AI',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/cohere-logo.png' },
+  },
+  {
+    title: 'Microsoft Phi-3',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/phi3-logo.png' },
+  },
+  {
+    title: 'Databricks DBRX',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/databricks-logo.png' },
+  },
+  {
+    title: 'Alibaba Qwen',
+    description: `
+    <div class="mb-1">
+      <span class="text-black font-semibold">AI Score:</span>
+      <span class="text-red-500">95 (-0.5%)</span>
+    </div>
+    <div class="text-gray-500 text-sm">3 days ago</div>
+    `,
+    image: { src: '/logos/qwen-logo.png' },
   },
   {
     title: 'Perplexity AI',
@@ -192,40 +258,7 @@ items={[
     </div>
     <div class="text-gray-500 text-sm">3 days ago</div>
     `,
-    image: { src: '/logos/xxx-logo.jpg' },
-  },
-  {
-    title: 'Meta AI',
-    description: `
-    <div class="mb-1">
-      <span class="text-black font-semibold">AI Score:</span>
-      <span class="text-red-500">95 (-0.5%)</span>
-    </div>
-    <div class="text-gray-500 text-sm">3 days ago</div>
-    `,
-    image: { src: '/logos/xxx-logo.jpg' },
-  },
-  {
-    title: 'Chatsonic',
-    description: `
-    <div class="mb-1">
-      <span class="text-black font-semibold">AI Score:</span>
-      <span class="text-red-500">95 (-0.5%)</span>
-    </div>
-    <div class="text-gray-500 text-sm">3 days ago</div>
-    `,
-    image: { src: '/logos/xxx-logo.jpg' },
-  },
-  {
-    title: 'Poe',
-    description: `
-    <div class="mb-1">
-      <span class="text-black font-semibold">AI Score:</span>
-      <span class="text-red-500">95 (-0.5%)</span>
-    </div>
-    <div class="text-gray-500 text-sm">3 days ago</div>
-    `,
-    image: { src: '/logos/xxx-logo.jpg' },
+    image: { src: '/logos/perplexity-logo.png' },
   },
 ]}
 >
