@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://astrowind.vercel.app/sitemap-index.xml
+Sitemap: https://ai4ai.vercel.app/sitemap-index.xml
