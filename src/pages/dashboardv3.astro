@@ -5,10 +5,10 @@ import Topbar from '~/components/dashboard/_topbar.astro';
 import Sidenav from '~/components/dashboard/_sidenav.astro';
 import Scripts from '~/components/_scripts.astro';
 
-const title = "AI 4 AI | Dashboard v3";
+const title = "AI 4 AI | Statistics";
 const path = "../../dist";
 const mainPage = "dashboard";
-const page = "dashboardv3";
+const page = "statistics";
 ---
 
 <!DOCTYPE html>
@@ -44,9 +44,9 @@ const page = "dashboardv3";
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
                   <li class="breadcrumb-item active" aria-current="page">
-                    Dashboard v3
+                    Statistics
                   </li>
                 </ol>
               </div>
@@ -64,15 +64,15 @@ const page = "dashboardv3";
                 <div class="card mb-4">
                   <div class="card-header border-0">
                     <div class="d-flex justify-content-between">
-                      <h3 class="card-title">Some kind of report</h3>
+                      <h3 class="card-title">Weekly Statistics</h3>
                       <a href="javascript:void(0);" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">View Report</a>
                     </div>
                   </div>
                   <div class="card-body">
                     <div class="d-flex">
                       <p class="d-flex flex-column">
-                        <span class="fw-bold fs-5">820</span>
-                        <span>XXX Over Time</span>
+                        <span class="fw-bold fs-5">75</span>
+                        <span>Score Over Time</span>
                       </p>
                       <p class="ms-auto d-flex flex-column text-end">
                         <span class="text-success">
@@ -227,14 +227,14 @@ const page = "dashboardv3";
                 <div class="card mb-4">
                   <div class="card-header border-0">
                     <div class="d-flex justify-content-between">
-                      <h3 class="card-title">Another report</h3>
+                      <h3 class="card-title">Yearly Statistics</h3>
                       <a href="javascript:void(0);" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">View Report</a>
                     </div>
                   </div>
                   <div class="card-body">
                     <div class="d-flex">
                       <p class="d-flex flex-column">
-                        <span class="fw-bold fs-5">666.666</span>
+                        <span class="fw-bold fs-5">69.5</span>
                         <span>Score Over Time</span>
                       </p>
                       <p class="ms-auto d-flex flex-column text-end">
@@ -300,7 +300,7 @@ const page = "dashboardv3";
                         <span class="fw-bold">
                           <i class="bi bi-graph-up-arrow text-success"></i> 12%
                         </span>
-                        <span class="text-secondary">CONVERSION RATE</span>
+                        <span class="text-secondary">IMPROVEMENT RATE</span>
                       </p>
                     </div>
                     <!-- /.d-flex -->

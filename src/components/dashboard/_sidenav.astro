@@ -34,47 +34,36 @@ const htmlPath = convertPathToHtml(path);
         role="menu"
         data-accordion="false"
       >
-        <li class:list={["nav-item", mainPage === "dashboard" && "menu-open"]}>
-          <a
-            href="#"
-            class:list={["nav-link", mainPage === "dashboard" && "active"]}
-          >
-            <i class="nav-icon bi bi-speedometer"></i>
-            <p>
-              Dashboard
-              <i class="nav-arrow bi bi-chevron-right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a
-                href={htmlPath + "/dashboardv1.html"}
-                class:list={["nav-link", page === "index" && "active"]}
-              >
-                <i class="nav-icon bi bi-circle"></i>
-                <p>Overview</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                href={htmlPath + "/dashboardv2.html"}
-                class:list={["nav-link", page === "index2" && "active"]}
-              >
-                <i class="nav-icon bi bi-circle"></i>
-                <p>Report</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                href={htmlPath + "/dashboardv3.html"}
-                class:list={["nav-link", page === "index3" && "active"]}
-              >
-                <i class="nav-icon bi bi-circle"></i>
-                <p>Statistics</p>
-              </a>
-            </li>
-          </ul>
-        </li>
+      <li class="nav-header">Dashboard</li>
+      <li class="nav-item">
+        <a
+          href={htmlPath + "/dashboardv1.html"}
+          class:list={["nav-link", page === "index" && "active"]}
+        >
+          <i class="nav-icon bi bi-speedometer"></i>
+          <p>Overview</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          href={htmlPath + "/dashboardv2.html"}
+          class:list={["nav-link", page === "index2" && "active"]}
+        >
+          <i class="nav-icon bi bi-clipboard2-pulse-fill"></i>
+          <p>Reports</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          href={htmlPath + "/dashboardv3.html"}
+          class:list={["nav-link", page === "index3" && "active"]}
+        >
+          <i class="nav-icon bi bi-graph-up"></i>
+          <p>Statistics</p>
+        </a>
+      </li>
+
+        <!-- Theme Generate and Widgets
         <li class="nav-item">
           <a
             href={htmlPath + "/generate/theme.html"}
@@ -84,6 +73,7 @@ const htmlPath = convertPathToHtml(path);
             <p>Theme Generate</p>
           </a>
         </li>
+      
         <li class:list={["nav-item", mainPage === "widgets" && "menu-open"]}>
           <a
             href="#"
@@ -125,6 +115,10 @@ const htmlPath = convertPathToHtml(path);
             </li>
           </ul>
         </li>
+        -->
+
+
+        <!-- Layouts, UI elements, froms and tables
         <li class:list={["nav-item", mainPage === "layout" && "menu-open"]}>
           <a
             href="#"
@@ -300,73 +294,9 @@ const htmlPath = convertPathToHtml(path);
             </li>
           </ul>
         </li>
+      -->
 
-        <li class="nav-header">EXAMPLES</li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon bi bi-box-arrow-in-right"></i>
-            <p>
-              Auth
-              <i class="nav-arrow bi bi-chevron-right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-box-arrow-in-right"></i>
-                <p>
-                  Version 1
-                  <i class="nav-arrow bi bi-chevron-right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href={htmlPath + "/examples/login.html"} class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Login</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href={htmlPath + "/examples/register.html"} class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Register</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-box-arrow-in-right"></i>
-                <p>
-                  Version 2
-                  <i class="nav-arrow bi bi-chevron-right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href={htmlPath + "/examples/login-v2.html"} class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Login</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href={htmlPath + "/examples/register-v2.html"} class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Register</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href={htmlPath + "/examples/lockscreen.html"} class="nav-link">
-                <i class="nav-icon bi bi-circle"></i>
-                <p>Lockscreen</p>
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="nav-header">DOCUMENTATIONS</li>
+        <li class="nav-header">Documentations</li>
         <li class="nav-item">
           <a
             href={htmlPath + "/docs/introduction.html"}
@@ -486,7 +416,71 @@ const htmlPath = convertPathToHtml(path);
           </a>
         </li>
 
-        <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+        <li class="nav-header">Examples</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon bi bi-box-arrow-in-right"></i>
+            <p>
+              Auth
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                <p>
+                  Version 1
+                  <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/login.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Login</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/register.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Register</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                <p>
+                  Version 2
+                  <i class="nav-arrow bi bi-chevron-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/login-v2.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Login</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href={htmlPath + "/examples/register-v2.html"} class="nav-link">
+                    <i class="nav-icon bi bi-circle"></i>
+                    <p>Register</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href={htmlPath + "/examples/lockscreen.html"} class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Lockscreen</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon bi bi-circle-fill"></i>
@@ -552,7 +546,6 @@ const htmlPath = convertPathToHtml(path);
           </a>
         </li>
 
-        <li class="nav-header">LABELS</li>
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon bi bi-circle text-danger"></i>

@@ -23,7 +23,7 @@ export const headerData = {
       href: getPermalink('/about'),
     },
   ],
-  actions: [{ text: 'Dashboard', href: getPermalink('/dashboardv1')}],
+  actions: [{ text: 'Dashboard', href: '/examples/login-v2'}],
 }
 
 /* Other Components --------------------------------

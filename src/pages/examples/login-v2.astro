@@ -2,7 +2,7 @@
 import Head from "~/components/_head.astro";
 import Scripts from "~/components/_scripts.astro";
 
-const title = "AI 4 AI | Login Page v2";
+const title = "AI 4 AI | Login Page";
 const path = "../../../dist";
 const htmlPath = "..";
 ---
@@ -19,7 +19,7 @@ const htmlPath = "..";
     <div class="login-box">
       <div class="card card-outline card-primary">
         <div class="card-header">
-          <a href={htmlPath + "/index2.html"} class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover">
+          <a href={htmlPath + "/index.html"} class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover">
             <h1 class="mb-0">
               <b>AI 4 AI</b>
             </h1>
@@ -84,18 +84,21 @@ const htmlPath = "..";
               <i class="bi bi-facebook me-2"></i> Sign in using Facebook
             </a>
             <a href="#" class="btn btn-danger">
-              <i class="bi bi-google me-2"></i> Sign in using Google+
+              <i class="bi bi-google me-2"></i> Sign in using Google
             </a>
           </div>
           <!-- /.social-auth-links -->
-
+          <p class="mb-0">
+            <a href="/dashboardv1" class="link-primary text-center">
+              Dashboard demo
+            </a>
+          </p>
           <p class="mb-1">
             <a href="forgot-password.html">I forgot my password</a>
           </p>
           <p class="mb-0">
-            <a href="register.html" class="text-center">
-              Register a new membership
-            </a>
+            <a href="register-v2.html" class="text-center">
+              Register
           </p>
         </div>
         <!-- /.login-card-body -->
